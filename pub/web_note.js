@@ -168,13 +168,17 @@ function createHighlightOptions() {
         whiteDiv.style.backgroundColor = "white";
         whiteDiv.onclick = () => clickHandler("white");
 
-
+        let strikedDiv = document.createElement("img");
+        strikedDiv.className = "dot";
+        strikedDiv.src = "./strikethrough.png";
+        strikedDiv.onclick = () => clickHandler("strikethrough");
 
         innerDiv.appendChild(greenDiv);
         innerDiv.appendChild(pinkDiv);
         innerDiv.appendChild(orangeDiv);
         innerDiv.appendChild(yellowDiv);
         innerDiv.appendChild(whiteDiv);
+        innerDiv.appendChild(strikedDiv);
 
         outerDiv.appendChild(innerDiv);
 
