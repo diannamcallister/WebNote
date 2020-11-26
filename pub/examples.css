@@ -1,0 +1,8 @@
+h1, h2, p {
+    text-align: center;
+}
+
+ul, ol {
+    display: table;
+    margin: 0 auto;
+}

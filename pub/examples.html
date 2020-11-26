@@ -4,24 +4,50 @@
  	<meta charset="utf-8">
     <title>WebNote</title>
     <link rel="stylesheet" type="text/css" href="web_note.css">
+    <link rel="stylesheet" type="text/css" href="examples.css">
      
  </head>
  <body>
-    <h1>Using WebNote</h1>
+    <h1 class="center">WebNote</h1>
 
     <h2>About WebNote</h2>
 
     <p>
         Webnote is a javascript library that allows for note-taking directly on web pages. The various forms of note-taking include:
-        <li>Highlight text in various colours</li>
-        <li>Cross out text</li>
-        <li>Bookmark different parts of the page for easy access</li>
+        <ul>
+            <li>Highlight text in various colours</li>
+            <li>Cross out text</li>
+            <li>Bookmark different parts of the page for easy access</li>
+        </ul>
     </p>
-    <p id="textstuff">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Mollis nunc sed id semper risus in hendrerit gravida rutrum. Elit at imperdiet 
-                        dui accumsan sit amet nulla facilisi morbi. Consequat semper viverra nam libero justo laoreet sit. 
-                        Dui sapien eget mi proin. Est lorem ipsum dolor sit amet consectetur dipiscing elit pellentesque.
+
+    <h2>How to implement WebNote</h2>
+    <p>Highlighting, striking out text, and adding a note are all performed by the same function in the WebNote library.</p>
+    <p>To implement this functionality:</p>
+    <ol>
+        <li>Figure out what text element you would like to add this functionality to on your webpage.</li>
+        <li>Get the id of the text element you want to add this functionality to by doing: 
+            <br>
+            <code>const textElement = document.getElementById("id_of_element");</code>
+        </li>
+        <li>In your javascript file, add an event listener for when the chosen element is clicked, and have the function from the WebNote
+            library called nextToHighlight be called:
+            <br>
+            <code>textElement.addEventListener('click', nextToHighlight);</code>
+        </li>
+        <li>Now you're all set!</li>
+    </ol>
+
+    <h2>Test WebNote!</h2>
+    <p id="textstuff">Here is a paragraph of text where you are able to test out the functionality of the WebNote library.
+        Feel free to try to highlight things in various colors, remove the highlights, performing strilethroughs on the text,
+        and even add notes!
     </p>
+
+    <p id="textstuff2">Here is a paragraph of text where you are able to test out the functionality of the WebNote library.
+            Feel free to try to highlight things in various colors, remove the highlights, performing strilethroughs on the text,
+            and even add notes!
+        </p>
     <script type="text/javascript" src='web_note.js'></script>
     <script type="text/javascript" src='examples.js'></script>
  </body>

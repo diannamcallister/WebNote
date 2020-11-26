@@ -33,6 +33,9 @@ function clickHandler(highlightColor, note) {
     if (parent.tagName.toLowerCase() === 'span' && highlightColor === 'white') {
         // need to remove highlight from element
         removeHighlight(parent);
+    } else if (parent.tagName.toLowerCase() === 'span' && highlightColor === "strikethrough") {
+        // add a strikethrough to something that is already highlighted
+        parent.style.textDecoration = "line-through";
     } else if (parent.childElementCount >= -1) {
         // a part of the parent element wants to be highlighted
 
@@ -63,9 +66,6 @@ function clickHandler(highlightColor, note) {
                 parent.insertBefore(beforeTextNode, spanElement);
             } 
         }
-    } else if (parent.tagName.toLowerCase() === 'span' && highlightColor === "strikethrough") {
-        // add a strikethrough to something that is already highlighted
-        parent.style.textDecoration = "line-through";
     }
 
     removeHighlightOptions();
@@ -85,13 +85,15 @@ function updateVisualOfText(highlightColor, note) {
         spanElement.style.textDecoration = "line-through";
     } else if (note !== undefined) {
         // a note will be added to the text
+        let noteText = prompt("Add the text of the note here:");
+
         let innerSpanElement = document.createElement("span");
-        const noteNode = document.createTextNode(highlightedText);
+        const noteNode = document.createTextNode(noteText);
         innerSpanElement.appendChild(noteNode);
         spanElement.style.backgroundColor = highlightColor;
         innerSpanElement.className= "tooltiptext";
         spanElement.appendChild(innerSpanElement);
-        spanElement.className += "test";
+        spanElement.className += "tooltip";
     }
     return spanElement;
 }
@@ -135,6 +137,7 @@ function removeHighlight(parent) {
 
 function createHighlightOptions() {
     const highlightDiv = document.getElementById("highlight");
+    const selectedText = selected.toString();
 
     if (highlightDiv === null) {
         let outerDiv = document.createElement("div");
@@ -173,15 +176,23 @@ function createHighlightOptions() {
         strikedDiv.src = "./strikethrough.png";
         strikedDiv.onclick = () => clickHandler("strikethrough");
 
+        let noteDiv = document.createElement("img");
+        noteDiv.className = "dot";
+        noteDiv.src = "./notepad.png";
+        noteDiv.onclick = () => clickHandler("#eaeaea", "note");
+
         innerDiv.appendChild(greenDiv);
         innerDiv.appendChild(pinkDiv);
         innerDiv.appendChild(orangeDiv);
         innerDiv.appendChild(yellowDiv);
         innerDiv.appendChild(whiteDiv);
         innerDiv.appendChild(strikedDiv);
+        innerDiv.appendChild(noteDiv);
 
         outerDiv.appendChild(innerDiv);
 
+        console.log("in here");
+        console.log(document.body.firstChild);
         document.body.insertBefore(outerDiv, document.body.firstChild);
     }
 }
