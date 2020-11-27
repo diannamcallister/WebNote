@@ -1,14 +1,17 @@
-var element = document.getElementById('textstuff'); 
-element.addEventListener('click', nextToHighlight);
+var overallDescription = document.getElementById('description'); 
+overallDescription.addEventListener('click', nextToHighlight);
 
-var element3 = document.getElementById('abstract1'); 
-element3.addEventListener('click', nextToHighlight);
+var source = document.getElementById('source'); 
+source.addEventListener('click', nextToHighlight);
 
-var element4 = document.getElementById('abstract2'); 
-element4.addEventListener('click', nextToHighlight);
+var abstract1 = document.getElementById('abstract1'); 
+abstract1.addEventListener('click', nextToHighlight);
 
-var element5 = document.getElementById('abstract3'); 
-element5.addEventListener('click', nextToHighlight);
+var abstract2 = document.getElementById('abstract2'); 
+abstract2.addEventListener('click', nextToHighlight);
 
-var element6 = document.getElementById('instructions'); 
-element6.addEventListener('click', nextToHighlight);
+var abstract3 = document.getElementById('abstract3'); 
+abstract3.addEventListener('click', nextToHighlight);
+
+var instructions = document.getElementById('instructions'); 
+instructions.addEventListener('click', nextToHighlight);
