@@ -8,12 +8,49 @@
      
  </head>
  <body>
-    <h1 class="center">WebNote</h1>
+    <div class="header"><h1>WebNote</h1></div>
 
-    <h2>About WebNote</h2>
+    <div class="row">
+            <div class="column">
+                <h2>About WebNote</h2>
 
+                <p>
+                    WebNote is a javascript library that allows for note-taking directly on web pages. 
+                    <br>
+                    The various forms of note-taking include:
+                    <ul>
+                        <li>Highlight text in various colours</li>
+                        <li>Cross out text</li>
+                        <li>Bookmark different parts of the page for easy access</li>
+                    </ul>
+                    <img class="markupOptionsPic" src="./markup-options.png"/>
+                </p>
+            </div>
+            <div class="column">
+                <div class="rightColumn">
+                <h2>How to implement WebNote</h2>
+                <p>Highlighting, striking out text, and adding a note are all performed by the same function in the WebNote library.</p>
+                <p>To implement this functionality:</p>
+                <ol>
+                    <li>Figure out what text element you would like to add this functionality to on your webpage.</li>
+                    <li>Get the id of the text element you want to add this functionality to by doing: 
+                        <br>
+                        <code>const textElement = document.getElementById("id_of_element");</code>
+                    </li>
+                    <li>In your javascript file, add an event listener for when the chosen element is clicked, and
+                        <br> have the function from the WebNote
+                        library called nextToHighlight be called:
+                        <br>
+                        <code>textElement.addEventListener('click', nextToHighlight);</code>
+                    </li>
+                </ol>
+            </div>
+            </div>
+          </div>
+
+    <!-- <h2>About WebNote</h2>
     <p>
-        Webnote is a javascript library that allows for note-taking directly on web pages. The various forms of note-taking include:
+        WebNote is a javascript library that allows for note-taking directly on web pages. The various forms of note-taking include:
         <ul>
             <li>Highlight text in various colours</li>
             <li>Cross out text</li>
@@ -30,24 +67,78 @@
             <br>
             <code>const textElement = document.getElementById("id_of_element");</code>
         </li>
-        <li>In your javascript file, add an event listener for when the chosen element is clicked, and have the function from the WebNote
+        <li>In your javascript file, add an event listener for when the chosen element is clicked, and
+            <br> have the function from the WebNote
             library called nextToHighlight be called:
             <br>
             <code>textElement.addEventListener('click', nextToHighlight);</code>
         </li>
         <li>Now you're all set!</li>
-    </ol>
+    </ol> -->
 
-    <h2>Test WebNote!</h2>
-    <p id="textstuff">Here is a paragraph of text where you are able to test out the functionality of the WebNote library.
-        Feel free to try to highlight things in various colors, remove the highlights, performing strilethroughs on the text,
-        and even add notes!
+    <h2>Try Out WebNote NOW!</h2>
+    <p id="textstuff">Below are different example use cases for WebNote. You can try highlighting or striking out text or adding notes
+        to the text below - the functinality you will see is from the library WebNote!
     </p>
 
-    <p id="textstuff2">Here is a paragraph of text where you are able to test out the functionality of the WebNote library.
-            Feel free to try to highlight things in various colors, remove the highlights, performing strilethroughs on the text,
-            and even add notes!
-        </p>
+    <h3>1. Abstract from the review article The Scientific Basis for High-Intensity Interval Training:</h3>
+    <p><u>Source:</u> JA. Hawley, K., CL. Wells, R., AM. Jones, H., PB. Laursen, E., CG. Blomqvist, B., HJ. Green, L., . . . I. Mujika, A. 
+        (1997, January 01). The Scientific Basis for High-Intensity Interval Training. Retrieved November 27, 2020, 
+        from https://link.springer.com/article/10.2165/00007256-200232010-00003</p>
+
+    <p id="abstract1">
+    While the physiological adaptations that occur following endurance training in previously sedentary and recreationally active 
+    individuals are relatively well understood, the adaptations to training in already highly trained endurance athletes remain unclear. 
+    While significant improvements in endurance performance and corresponding physiological markers are evident following submaximal 
+    endurance training in sedentary and recreationally active groups, an additional increase in submaximal training (i.e. volume) in 
+    highly trained individuals does not appear to further enhance either endurance performance or associated physiological variables 
+    [e.g. peak oxygen uptake (V̇O2peak), oxidative enzyme activity]. It seems that, for athletes who are already trained, improvements 
+    in endurance performance can be achieved only through high-intensity interval training (HIT). The limited research which has examined 
+    changes in muscle enzyme activity in highly trained athletes, following HIT, has revealed no change in oxidative or glycolytic enzyme
+    activity, despite significant improvements in endurance performance (p < 0.05). Instead, an increase in skeletal muscle buffering 
+    capacity may be one mechanism responsible for an improvement in endurance performance. Changes in plasma volume, stroke volume, as 
+    well as muscle cation pumps, myoglobin, capillary density and fibre type characteristics have yet to be investigated in response to 
+    HIT with the highly trained athlete. Information relating to HIT programme optimisation in endurance athletes is also very sparse. 
+    Preliminary work using the velocity at whichV̇O2max is achieved (Vmax) as the interval intensity, and fractions (50 to 75%) of the 
+    time to exhaustion at Vmax (Tmax) as the interval duration has been successful in eliciting improvements in performance in long-distance 
+    runners. However, Vmax and Tmax have not been used with cyclists. Instead, HIT programme optimisation research in cyclists has 
+    revealed that repeated supramaximal sprinting may be equally effective as more traditional HIT programmes for eliciting improvements 
+    in endurance performance. Further examination of the biochemical and physiological adaptations which accompany different HIT programmes, 
+    as well as investigation into the optimal HIT programme for eliciting performance enhancements in highly trained athletes is required.
+    </p>
+    <p id="abstract2">
+    Compared with the volume of research that describes the physiological adaptations to endurance-exercise training in sedentary and 
+    recreationally trained individuals, relatively little work has examined the physiological and performance responses of already highly 
+    trained athletes to a modified training programme. In part, this may be because of the difficulty of persuading highly trained athletes 
+    to alter their training programmes to accommodate the interests of exercise scientists.[1] Consequently, recommendations made by 
+    exercise scientists to coaches and athletes are largely based on training studies completed with sedentary and recreationally trained 
+    individuals coupled with anecdotal hearsay of some successful coaches.[1,2] Highly trained athletes already have a high aerobic capacity, 
+    lactate threshold (Tlac), and economy of motion.[3,4] Therefore, the physiological adaptations that generally account for improved 
+    performance in sedentary or recreationally trained individuals[5,6] may not necessarily apply to the highly trained athlete.[7] 
+    Indeed, in the highly trained athlete, an additional increase in submaximal exercise training (i.e. volume) does not appear to further 
+    enhance either endurance performance or associated variables such as maximal oxygen uptake (V̇O2max), anaerobic threshold, economy of 
+    motion and oxidative muscle enzymes.[8–10]
+    </p>
+    <p id="abstract3">
+    In these individuals, it appears that further improvements in performance can only be achieved through high-intensity interval training 
+    (HIT).[8] The only research to date that has examined the physiological responses of already highly trained athletes to HIT[7] indicates 
+    no up-regulation of oxidative or glycolytic enzyme activity, despite significant improvements in 40km cycling time-trial performance and 
+    peak power output (Ppeak) obtained during a progressive exercise test (p < 0.05). Skeletal muscle buffering capacity significantly 
+    increased (p < 0.05), but the increase was not related to improvements in Ppeak and 40km time-trial performance. Thus, the mechanisms 
+    responsible for improvements in performance following HIT in the already highly trained athlete remain unclear. This article will: (i) 
+    briefly review the adaptations to endurance training known to occur in sedentary and recreationally active individuals; (ii) outline 
+    some physiological mechanisms that may further enhance performance following HIT in the already highly trained athlete; and (iii) 
+    consider the issue of HIT programme optimisation in the highly trained athlete.            
+    </p>
+
+    <h3>2. Steps in instructions</h3>
+    <ol id="instructions">
+        <li>Highlight me in yellow. Once completed, cross me off!</li>
+        <li>Highlight me in green. Once completed, cross me off!</li>
+        <li>Highlight me in pink. Then remove my highlight (highlight me in white). Once completed, cross me off!</li>
+        <li>Add a note to me, saying anything you want! Once completed, hover over me to see your note!</li>
+    </ol>
+
     <script type="text/javascript" src='web_note.js'></script>
     <script type="text/javascript" src='examples.js'></script>
  </body>

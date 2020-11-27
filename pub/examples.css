@@ -1,8 +1,52 @@
-h1, h2, p {
+h2, h3 {
+    text-align: center;
+    background-color: #93ddf3;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+p {
     text-align: center;
 }
 
 ul, ol {
     display: table;
     margin: 0 auto;
+}
+
+#instructions {
+    padding-bottom: 20px;
+}
+
+.header {
+    border: 5px solid #93ddf3;
+    border-radius: 25px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.rightColumn {
+    border-left: 6px solid #93ddf3;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.markupOptionsPic {
+    width: 240px;
+    height: 40px;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
 }

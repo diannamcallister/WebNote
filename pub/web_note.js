@@ -1,7 +1,3 @@
-
-// var element = document.getElementById('textstuff'); 
-// element.addEventListener('click', nextToHighlight);
-
 var selected;
 const spanClassName = "note";
 const innerSpanClassName = "hoveringNote";
@@ -181,6 +177,11 @@ function createHighlightOptions() {
         noteDiv.src = "./notepad.png";
         noteDiv.onclick = () => clickHandler("#eaeaea", "note");
 
+        let downloadDiv = document.createElement("img");
+        downloadDiv.className = "dot";
+        downloadDiv.src = "./download.png";
+        downloadDiv.onclick = saveData;
+
         innerDiv.appendChild(greenDiv);
         innerDiv.appendChild(pinkDiv);
         innerDiv.appendChild(orangeDiv);
@@ -188,12 +189,15 @@ function createHighlightOptions() {
         innerDiv.appendChild(whiteDiv);
         innerDiv.appendChild(strikedDiv);
         innerDiv.appendChild(noteDiv);
+        innerDiv.appendChild(downloadDiv);
 
         outerDiv.appendChild(innerDiv);
 
-        console.log("in here");
-        console.log(document.body.firstChild);
-        document.body.insertBefore(outerDiv, document.body.firstChild);
+        let anchored = selected.anchorNode.parentElement;
+        while (anchored.tagName.toLowerCase() !== "p" && anchored.tagName.toLowerCase() !== "ol" && anchored.tagName.toLowerCase() !== "ul") {
+            anchored = anchored.parentElement;
+        }
+        document.body.insertBefore(outerDiv, anchored);
     }
 }
 
@@ -201,3 +205,18 @@ function removeHighlightOptions() {
     const outerDiv = document.getElementById("highlight");
     document.body.removeChild(outerDiv);
 }
+
+function saveData() {
+    removeHighlightOptions();
+    var a = document.createElement("a");
+    document.body.appendChild(a);
+    a.style = "display: none";
+    let data = document.getElementsByTagName("html")[0].innerHTML;
+    let blob = new Blob([data], {type: "text/html"});
+    let url = window.URL.createObjectURL(blob);
+    a.href = url;
+    let downloadFile = prompt("What is the name of the file you want to save the html to?");
+    a.download = downloadFile;
+    a.click();
+    window.URL.revokeObjectURL(url);
+};
