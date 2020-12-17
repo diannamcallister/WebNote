@@ -15,3 +15,7 @@ All of these options are available through the markup options:
 
 ## Heroku Deployed URL
 To see the example html page running this library, go to: [https://webnote-lib.herokuapp.com/](https://webnote-lib.herokuapp.com/)
+
+
+## Acklowedgements & Citations
+To learn how to include note visability / hovering in a certain manner as well as various other style formats, [https://www.w3schools.com/](https://www.w3schools.com/) was extremely helfpul
