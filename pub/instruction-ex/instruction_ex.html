@@ -4,11 +4,13 @@
  	<meta charset="utf-8">
     <title>WebNote</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="lit_ex.css">
+    <link rel="stylesheet" type="text/css" href="instruction_ex.css">
+    <link rel="stylesheet" type="text/css" href="../webnote/web_note.css">
 
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script defer type="text/javascript" src='lit_ex.js'></script>
+    <script defer type="text/javascript" src='../webnote/web_note.js'></script>
+    <script defer type="text/javascript" src='instruction_ex.js'></script>
      
  </head>
  <body>
@@ -27,8 +29,8 @@
                         Examples
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="./lit_ex.html">Review Article</a>
-                        <a class="dropdown-item" href="../instruction-ex/instruction_ex.html">Instructions</a>
+                        <a class="dropdown-item" href="../lit-ex/lit_ex.html">Review Article</a>
+                        <a class="dropdown-item" href="./instruction_ex.html">Instructions</a>
                     </div>
                     </li>
             <li class="nav-item">
@@ -41,42 +43,38 @@
         </div>
     </nav>
     <h1>
-        Review Article
+        Instructions
     </h1>
     <div class="rectangle"></div>
     <h4>
-        Here is an example of using WebNote on an online journal article. Test out the highlighting, bookmarking, and note-taking
-        on the page!
+        Here is an example of using WebNote on a list of instructions. Test out the highlighting, striking words out, note-taking, and
+        downloading & uploading html files!
         
-        Move between the <b>Preview</b>, <b>JS</b>, <b>HTML</b> and <b>CSS</b> tabs to view how to set up WebNote on a journal article
-        like this one!
+        Move between the <b>Preview</b>, <b>JS</b>, <b>HTML</b> and <b>CSS</b> tabs to view how to set up WebNote on a set of instructions
+        like this!
     </h4>
     <ul class="nav nav-tabs nav-margin">
         <li class="nav-item">
-            <a href="./lit_ex.html" class="nav-link">Preview</a>
+            <a href="./instruction_ex.html" class="nav-link active">Preview</a>
         </li>
         <li class="nav-item">
-            <a href="./lit_ex-JS.html" class="nav-link active">JS</a>
+            <a href="./instruction_ex-JS.html" class="nav-link">JS</a>
         </li>
         <li class="nav-item">
-            <a href="./lit_ex-HTML.html" class="nav-link">HTML</a>
+            <a href="./instruction_ex-HTML.html" class="nav-link">HTML</a>
         </li>
         <li class="nav-item">
-            <a href="./lit_ex-CSS.html" class="nav-link">CSS</a>
+            <a href="./instruction_ex-CSS.html" class="nav-link">CSS</a>
         </li>
     </ul>
 
-    <div class="code code-backing">
-        <code>
-            var abstract1 = document.getElementById('abstract1'); <br>
-            abstract1.addEventListener('click', nextToHighlight); <br>
-            <br>
-            var abstract2 = document.getElementById('abstract2'); <br>
-            abstract2.addEventListener('click', nextToHighlight); <br>
-            <br>
-            var abstract3 = document.getElementById('abstract3'); <br>
-            abstract3.addEventListener('click', nextToHighlight);
-        </code>
+    <div class="code">
+        <ol id="instructions">
+            <li>Highlight me in yellow. Once completed, cross me off!</li>
+            <li>Highlight me in green. Once completed, cross me off!</li>
+            <li>Highlight me in pink. Then remove my highlight (highlight me in white). Once completed, cross me off!</li>
+            <li>Add a note to me, saying anything you want! Once completed, hover over me to see your note!</li>
+        </ol>
     </div>
 
     

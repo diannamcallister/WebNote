@@ -186,27 +186,27 @@
 
             let noDiv = document.createElement("img");
             noDiv.className = "dot";
-            noDiv.src = "./no_highlight.png";
+            noDiv.src = "https://webnote-lib.herokuapp.com/markup-bar-pics/no_highlight.png";
             noDiv.onclick = () => clickHandler("white");
 
             let strikedDiv = document.createElement("img");
             strikedDiv.className = "dot";
-            strikedDiv.src = "./strikethrough.png";
+            strikedDiv.src = "https://webnote-lib.herokuapp.com/markup-bar-pics/strikethrough.png";
             strikedDiv.onclick = () => clickHandler("strikethrough");
 
             let noteDiv = document.createElement("img");
             noteDiv.className = "dot";
-            noteDiv.src = "./notepad.png";
+            noteDiv.src = "https://webnote-lib.herokuapp.com/markup-bar-pics/notepad.png";
             noteDiv.onclick = () => clickHandler("#eaeaea", "note");
 
             let bookmarkDiv = document.createElement("img");
             bookmarkDiv.className = "dot";
-            bookmarkDiv.src = "./bookmark.png";
+            bookmarkDiv.src = "https://webnote-lib.herokuapp.com/markup-bar-pics/bookmark.png";
             bookmarkDiv.onclick = createBookmark;
 
             let downloadDiv = document.createElement("img");
             downloadDiv.className = "dot";
-            downloadDiv.src = "./download.png";
+            downloadDiv.src = "https://webnote-lib.herokuapp.com/markup-bar-pics/download.png";
             downloadDiv.onclick = saveData;
 
             let uploadDiv = document.createElement("input");
@@ -216,7 +216,7 @@
 
             let closeDiv = document.createElement("img");
             closeDiv.className = "dot";
-            closeDiv.src = "./close.png";
+            closeDiv.src = "https://webnote-lib.herokuapp.com/markup-bar-pics/close.png";
             closeDiv.onclick = removeHighlightOptions;
 
             innerDiv.appendChild(greenDiv);

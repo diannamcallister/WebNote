@@ -1,0 +1,100 @@
+h1, h5, h2 {
+    margin: 20px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+}
+
+h4 {
+    margin: 20px;
+    margin-left: 30px;
+}
+
+.rectangle {
+    height: 7px;
+    width: 270px;
+    background-color: #93ddf3;
+    margin: 20px;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+.rectangle-html {
+    height: 7px;
+    width: 290px;
+    background-color: #93ddf3;
+    margin: 20px;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+.rectangle-js {
+    height: 7px;
+    width: 240px;
+    background-color: #93ddf3;
+    margin: 20px;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+.rectangle-ex {
+    height: 7px;
+    width: 205px;
+    background-color: #93ddf3;
+    margin: 20px;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+.gif {
+    border: 5px solid black;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.rightColumn {
+    border-left: 6px solid #93ddf3;
+    padding-bottom: 15px;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.center {
+    text-align: center;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.ul-center {
+    display: table;
+    margin: 0 auto;
+}
+
+.code {
+    margin: 30px;
+}
+
+.code-backing {
+    background-color: whitesmoke;
+}

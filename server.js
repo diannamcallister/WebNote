@@ -10,7 +10,7 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, '/pub')))
 
 // app.get('/', (req, res) => {
-//     res.sendFile('landing-page/landing_page.html', {root: __dirname });
+//     res.sendFile('/pub/landing-page/landing_page.html', {root: __dirname });
 //     // res.sendFile(__dirname + '/pub/landing-page/landing_page.html');
 // })
 
