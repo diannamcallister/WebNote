@@ -37,15 +37,19 @@ The information for "getting started" using WebNote can be found below, and also
 <h4>
     Within the <code>&lt;head&gt;</code> of the HTML page where WebNote will be used, the three following tags must be added:
 </h4>
+
 <code>
     &lt;link rel="stylesheet" type="text/css" href="https://webnote-lib.herokuapp.com/webnote/web_note.css"&gt;
 </code>
+<br />
 <code>
     &lt;script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
 </code>
+<br />
 <code>
     &lt;script defer type="text/javascript" src='https://webnote-lib.herokuapp.com/webnote/web_note.js'&gt;&lt;/script&gt;
 </code>
+<br />
 <h5>
     It is necessary to have jQuery, as well as the JS & CSS files for WebNote to be able to use the WebNote library.
 </h5>
@@ -58,6 +62,7 @@ The information for "getting started" using WebNote can be found below, and also
 <code>
     const textElement = document.getElementById("id_of_element");
 </code>
+<br />
 <code>
     textElement.addEventListener('click', nextToHighlight);
 </code>
@@ -74,44 +79,60 @@ The information for "getting started" using WebNote can be found below, and also
 <code>
     &lt;!DOCTYPE html&gt;
 </code>
+<br />
 <code>
     &lt;html lang="en"&gt;
 </code>
+<br />
 <code>
         &lt;head&gt;
 </code>
+<br />
 <code>
             &lt;meta charset="utf-8"&gt;
   </code>
+  <br />
 <code>
             &lt;link rel="stylesheet" type="text/css" href="https://webnote-lib.herokuapp.com/webnote/web_note.css"&gt;
   </code>
+  <br />
 <code>
             &lt;script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
 </code>
+<br />
 <code>
             &lt;script defer type="text/javascript" src='https://webnote-lib.herokuapp.com/webnote/web_note.js'&gt;&lt;/script&gt;
   </code>
+  <br />
 <code>
             &lt;script defer type="text/javascript" src="test.js"&gt;&lt;/script&gt;
   </code>
+  <br />
 <code>
         &lt;/head&gt;
   </code>
+  <br />
 <code>
         &lt;body&gt;
   </code>
+  <br />
 <code>
         &lt;p id="testing"&gt;Testing if I can use WebNote on this!&lt;/p&gt;
   </code>
+  <br />
 <code>
         &lt;/body&gt;
+</code>
+  <br />
+<code>
+        &lt;/html&gt;
 </code>
 
 <h5>JS file called <code>"test.js"</code> includes:</h5>
 <code>
     const textElement = document.getElementById("testing");
 </code>
+  <br />
 <code>
     textElement.addEventListener('click', nextToHighlight);
 </code>
