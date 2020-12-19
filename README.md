@@ -17,7 +17,7 @@ All of these options are available through the markup options:
 
 
 ## Heroku Deployed URL
-To see the landing page page for this library, go to: [https://webnote-lib.herokuapp.com/landing-page/landing_page.html](https://webnote-lib.herokuapp.com/landing-page/landing_page.html/)
+To see the landing page page for this library, go to: [https://webnote-lib.herokuapp.com/landing-page/landing_page.html](https://webnote-lib.herokuapp.com/landing-page/landing_page.html)
 
 ### Examples
 To see the examples for this library, use the drop-down menu in the dashboard under "Examples":
