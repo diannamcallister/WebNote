@@ -49,7 +49,7 @@ The information for "getting started" using WebNote can be found below, and also
 <code>
     &lt;script defer type="text/javascript" src='https://webnote-lib.herokuapp.com/webnote/web_note.js'&gt;&lt;/script&gt;
 </code>
-<br />
+
 <h5>
     It is necessary to have jQuery, as well as the JS & CSS files for WebNote to be able to use the WebNote library.
 </h5>
