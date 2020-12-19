@@ -9,10 +9,11 @@ const path = require('path');
 // using Express middleware.
 app.use(express.static(path.join(__dirname, '/pub')))
 
-// app.get('/', (req, res) => {
-//     res.sendFile('/pub/landing-page/landing_page.html', {root: __dirname });
-//     // res.sendFile(__dirname + '/pub/landing-page/landing_page.html');
-// })
+app.get('/', (req, res) => {
+    // res.sendFile( path.join( __dirname, 'pub/landing-page/', 'landing_page.html' ));
+    // res.sendFile('/landing-page/landing_page.html', {root: path.join(__dirname, '/pub') });
+    res.sendFile(__dirname + '/pub/landing-page/landing_page.html');
+})
 
 // will use an 'environmental variable', process.env.PORT, for deployment.
 const port = process.env.PORT || 5000

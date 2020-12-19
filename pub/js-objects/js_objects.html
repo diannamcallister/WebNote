@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ 	<meta charset="utf-8">
+    <title>WebNote</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="js_objects.css">
+
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     
+ </head>
+ <body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #93ddf3;">
+        <a class="navbar-brand" href="#">&nbsp;&nbsp;WebNote</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Examples
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="../lit-ex/lit_ex.html">Review Article</a>
+                        <a class="dropdown-item" href="../instruction-ex/instruction_ex.html">Instructions</a>
+                    </div>
+                    </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../impl/impl.html">Implementation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../functionality/functionality.html">API Calls</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="./js_objects.html">JS Objects</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <h1>
+        JS Objects & Workflow
+    </h1>
+    <div class="rectangle"></div>
+
+    <h3>Select each section to learn about the JS objects created / helper functions called when performing a certain action through
+        the UI.
+    </h3>
+
+    <div id="accordion">
+              <div class="card-header" id="headingOne">
+                <h5>
+                  <button class="btn collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h2>1. Select Text &#8594; Creates Markup Options Bar</h2>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <img class="markupOptions" src="https://webnote-lib.herokuapp.com/markup-options.png">
+                <h4>
+                    When highlighting a text element that has an eventListener for the function <code>nextToHighlight()</code> from 
+                    the WebNote library, the helper function <code>createHighlightOptions()</code> will be called, to create the 
+                    markup options bar and display it on the page.
+                </h4>
+                <h4>
+                    Below, you can take a look at the HTML and CSS that are used and formed in the JS file to create the markup options bar:
+                </h4>
+
+                <!-- inner1 -->
+                <div class="card-header" id="headingOneOne">
+                    <h5>
+                        <button class="btn collapsed" data-toggle="collapse" data-target="#collapseOneOne" aria-expanded="false" aria-controls="collapseOneOne">
+                        <h3 class="subheader">HTML</h3>
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseOneOne" class="collapse" aria-labelledby="headingOneOne" data-parent="#collapseOne">
+                
+                    <div class="code code-backing">
+                        <code>
+                            &lt;div id="highlight"&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="highlightOptions"&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class="dot" style="background-color: green;"&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class="dot" id="pink" style="background-color: pink;"&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class="dot" style="background-color: orange;"&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class="dot" style="background-color: yellow;"&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class="dot" src="https://webnote-lib.herokuapp.com/markup-bar-pics/no_highlight.png"&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class="dot" src="https://webnote-lib.herokuapp.com/markup-bar-pics/strikethrough.png"&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class="dot" src="https://webnote-lib.herokuapp.com/markup-bar-pics/bookmark.png"&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class="dot" src="https://webnote-lib.herokuapp.com/markup-bar-pics/notepad.png"&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class="dot" src="https://webnote-lib.herokuapp.com/markup-bar-pics/close.png"&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class="dot" src="https://webnote-lib.herokuapp.com/markup-bar-pics/download.png"&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="file" id="uploadFile"&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; <br>
+                            &lt;/div&gt;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- inner2 -->
+
+                <div class="card-header" id="headingOneTwo">
+                    <h5>
+                        <button class="btn collapsed" data-toggle="collapse" data-target="#collapseOneTwo" aria-expanded="false" aria-controls="collapseOneTwo">
+                        <h3 class="subheader">CSS</h3>
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseOneTwo" class="collapse" aria-labelledby="headingOneTwo" data-parent="#collapseOne">
+
+                    <h5>To create the outer box / rectangle surrounding the markup options, a div with the id <code>highlight</code>
+                        is added to the DOM, whose CSS style is as follows:</h5>
+                    <div class="code code-backing">
+                        <code>
+                            #highlight { <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;border-style:solid; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;border-width:3px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;padding-top: 5px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;padding-bottom: 5px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;margin:5px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;height:80px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;width:360px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;overflow:hidden; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;text-align:center; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;background-color: white; <br>
+                            }
+                        </code>
+                    </div>
+
+                    <h5>To make the markup options appear in circles, a class with the name <code>dot</code>
+                        is added to each of the elements of the markup options bar, whose CSS style is as follows:</h5>
+                    <div class="code code-backing">
+                        <code>
+                            .dot { <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;height: 25px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;width: 25px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 50%; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;margin-right: 10px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid black; <br>
+                            }
+                        </code>
+                    </div>
+                </div>
+            </div>
+
+              <!-- outer2 -->
+
+              <div class="card-header" id="headingTwo">
+                <h5>
+                  <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <h2>2. Select Markup Option &#8594; Display Markup On Page</h2>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <h4>
+                    There are many options that can be chosen from the markup options bar. 
+                    <br>
+                    <br>
+                    Whenever one of the options are chosen, the 
+                    helper functions <code>clickHandler()</code> and <code>updateVisualOfText()</code> are called to display the desired
+                    markup change to the user.
+                    <br>
+                    <br>
+                    Take a look at the HTML and CSS performed when each markup option is selected:
+                </h4>
+            
+                <!-- inner1 -->
+                <div class="card-header" id="headingTwoOne">
+                    <h5>
+                        <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwoOne" aria-expanded="false" aria-controls="collapseTwoOne">
+                        <h3 class="subheader">Any Highlight Option
+                        </h3> 
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseTwoOne" class="collapse" aria-labelledby="headingTwoOne" data-parent="#collapseTwo">
+                
+                    <h5>
+                        When any of the green, pink, orange, or yellow circles are chosen from the markup bar, then the selected text
+                        that is desired to be highlighted will be added to a span element, and it will have its background color edited.
+                    </h5>
+                    <h5><b>NOTE:</b> due to the addition of the span element to display a highlighted text element, this library has
+                    decided that if text has already been highlighted, any further highlight modifications attempted (ex: changing
+                    the highlight to a different colour, highlighting content that overlaps with existing highlighted content, etc.)
+                    will be ignored. The user must first remove the highlight, and then is able to perform the different highlight modifications
+                    desired.</h5>
+                    <h5>HTML changes:</h5>
+                    <div class="code code-backing">
+                        <code>
+                            # in this example, we are assuming that the highlight color chosen was yellow <br>
+                            &lt;span style="background-color: yellow;">chosen text&lt;/span&gt;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- inner2 -->
+                <div class="card-header" id="headingTwoTwo">
+                    <h5>
+                        <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwoTwo" aria-expanded="false" aria-controls="collapseTwoTwo">
+                        <h3 class="subheader">Remove Highlight Option
+                            <img class="image" src="https://webnote-lib.herokuapp.com/markup-bar-pics/no_highlight.png">
+                        </h3>
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseTwoTwo" class="collapse" aria-labelledby="headingTwoTwo" data-parent="#collapseTwo">
+                
+                    <h5>
+                        When the "no" symbol is selected, the <code>removeHighlight()</code> function is called
+                        to remove the span element that was previously added to the text 
+                        (if the selected text was not highlighted, no action will be taken):
+                    </h5>
+                    <h5>HTML before:</h5>
+                    <div class="code code-backing">
+                        <code>
+                            # in this example, we are assuming that the highlight color chosen was yellow <br>
+                            &lt;p&gt;&lt;span style="background-color: yellow;">chosen text&lt;/span&gt;&lt;/p&gt;
+                        </code>
+                    </div>
+                    <h5>HTML after:</h5>
+                    <div class="code code-backing">
+                        <code>
+                            &lt;p&gt;chosen text&lt;/p&gt;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- inner3 -->
+                <div class="card-header" id="headingTwoThree">
+                    <h5>
+                        <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwoThree" aria-expanded="false" aria-controls="collapseTwoThree">
+                        <h3 class="subheader">Strikethrough
+                            <img class="image" src="https://webnote-lib.herokuapp.com/markup-bar-pics/strikethrough.png">
+                        </h3>
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseTwoThree" class="collapse" aria-labelledby="headingTwoThree" data-parent="#collapseTwo">
+                
+                    <h5>
+                        When the strikethrough option is chosen from the markup bar, then the selected text
+                        that is desired to be striked out will be added to a span element, and it will have its text decoration edited:
+                    </h5>
+                    <h5>HTML changes:</h5>
+                    <div class="code code-backing">
+                        <code>
+                            &lt;span text-decoration:“line-through;">chosen text&lt;/span&gt;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- inner4 -->
+                <div class="card-header" id="headingTwoFour">
+                    <h5>
+                        <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwoFour" aria-expanded="false" aria-controls="collapseTwoFour">
+                        <h3 class="subheader">Bookmark
+                            <img class="image" src="https://webnote-lib.herokuapp.com/markup-bar-pics/bookmark.png">
+                        </h3>
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseTwoFour" class="collapse" aria-labelledby="headingTwoFour" data-parent="#collapseTwo">
+                
+                    <h5>
+                        When the bookmark option is chosen from the markup bar, then the function <code>createBookmark()</code>
+                        is called to create a bookmark element (html element / div with id = 
+                        <code>bookmark</code>) and add the bookmark element to the webpage, on the right hand side of the page at the relative height on the
+                        screen to the relative height of the chosen text compared to the height of the webpage (ex: if a bookmark is added
+                        for text at the bottom of a webpage, then the bookmark will displayed lower on the side of the screen).
+                    </h5>
+                    <h5>HTML changes:</h5>
+                    <h5>A div is added to the bottom of the body of the webpage, with the id <code>bookmark</code> and a style value
+                    for <code>top</code> depending on the height of the text on the webpage:</h5>
+                    <div class="code code-backing">
+                        <code>
+                            # in this example, we are assuming that the height of the text is 39.2931% of the webpage <br>
+                            &lt;div id="bookmark" style="top: 39.2931%;"&gt;&lt;/div&gt;
+                        </code>
+                    </div>
+                    <h5>CSS changes:</h5>
+                    <h5>
+                        A div with the id <code>bookmark</code> is added to the DOM when creating the bookmark, whose CSS style is as 
+                        follows:
+                    </h5>
+                    <div class="code code-backing">
+                        <code>
+                            #bookmark { <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;border-style:solid; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;border-width:2px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;position: fixed; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;margin:1px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;height:5px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;width:20px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;overflow:hidden; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;background-color: yellow; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;right: 0px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;top: 50%; <br>
+                            }
+                        </code>
+                    </div>
+                </div>
+
+                <!-- inner5 -->
+                <div class="card-header" id="headingTwoFive">
+                    <h5>
+                        <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwoFive" aria-expanded="false" aria-controls="collapseTwoFive">
+                        <h3 class="subheader">Note
+                            <img class="image" src="https://webnote-lib.herokuapp.com/markup-bar-pics/notepad.png">
+                        </h3>
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseTwoFive" class="collapse" aria-labelledby="headingTwoFive" data-parent="#collapseTwo">
+                
+                    <h5>
+                        When the note option is chosen from the markup bar, then a note element (html element / span with id = 
+                        <code>tooltip</code>) is added around the selected text. Then, another span element (with id = 
+                        <code>tooltiptext</code>) is added inside of the tooltip span, which will include the note information.
+                        When the note is added, a grey highlight and dotted underline is added to the text with the note, and
+                        when hovering over the text with the note, the note's contents is displayed.
+                    </h5>
+                    <h5>HTML changes:</h5>
+
+                    <div class="code code-backing">
+                        <code>
+                            # in this example, we are assuming that highlighted text was "markers" and that
+                            the text of the added note was "test!" <br>
+                            &lt;span class="tooltip" style="background-color: rgb(234, 234, 234);"&gt; markers 
+                            &lt;span class="tooltiptext"&gt;test!&lt;/span&gt;&lt;/span&gt;
+                        </code>
+                    </div>
+                    <h5>CSS changes:</h5>
+                    <h5>
+                        A span element with the id <code>tooltip</code> is added to the DOM when creating the note, 
+                        whose CSS style is as follows:
+                    </h5>
+                    <div class="code code-backing">
+                        <code>
+                            .tooltip { <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;position: relative; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;border-bottom: 1px dotted black; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;opacity: 100; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;font: auto; <br>
+                            }
+                        </code>
+                    </div>
+                    <h5>
+                        A span element with the id <code>tooltiptext</code> is added to the DOM when creating the note, 
+                        whose CSS style is as follows:
+                    </h5>
+                    <div class="code code-backing">
+                        <code>
+                            .tooltip .tooltiptext { <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;visibility: hidden; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;background-color: #eaeaea; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid black; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;color: black; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;text-align: center; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;padding: 5px 5px 5px; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 6px; <br>
+                            
+                                &nbsp;&nbsp;&nbsp;&nbsp;position: absolute; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;z-index: 1; <br>
+                            
+                                &nbsp;&nbsp;&nbsp;&nbsp;width: auto; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;bottom: 100%; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;left: 50%; <br>
+                            }
+                        </code>
+                    </div>
+                    <h5>
+                        When the <code>tooltip</code> span is hovered over, the note is shown. This is due to the CSS, 
+                        whose style is as follows:
+                    </h5>
+                    <div class="code code-backing">
+                        <code>
+                            .tooltip:hover .tooltiptext { <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;visibility: visible; <br>
+                            }
+                        </code>
+                    </div>
+                </div>
+
+                <!-- inner6 -->
+                <div class="card-header" id="headingTwoSix">
+                    <h5>
+                        <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwoSix" aria-expanded="false" aria-controls="collapseTwoSix">
+                        <h3 class="subheader">Hide Markup Bar
+                            <img class="image" src="https://webnote-lib.herokuapp.com/markup-bar-pics/close.png">
+                        </h3>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwoSix" class="collapse" aria-labelledby="headingTwoSix" data-parent="#collapseTwo">
+                    <h5>
+                        When selecting on the "X" option, the function <code>removeHighlightOptions()</code>
+                        is called and causes the markup options bar to be removed from the DOM. No other HTML modifications are made.
+                    </h5>
+                </div>
+
+                <!-- inner7 -->
+                <div class="card-header" id="headingTwoSeven">
+                    <h5>
+                        <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwoSeven" aria-expanded="false" aria-controls="collapseTwoSeven">
+                        <h3 class="subheader">Upload File</h3>
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseTwoSeven" class="collapse" aria-labelledby="headingTwoSeven" data-parent="#collapseTwo">
+                
+                    <h5>
+                        When selecting on the upload file text, the user is able to add a file to the DOM, which will replace the HTML
+                        of the current webpage through the function <code>loadData()</code>. No other HTML modifications are made.
+                    </h5>
+                </div>
+
+                 <!-- inner8 -->
+                 <div class="card-header" id="headingTwoEight">
+                    <h5>
+                        <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwoEight" aria-expanded="false" aria-controls="collapseTwoEight">
+                        <h3 class="subheader">Download File
+                                <img class="image" src="https://webnote-lib.herokuapp.com/markup-bar-pics/download.png">
+                        </h3>
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseTwoEight" class="collapse" aria-labelledby="headingTwoEight" data-parent="#collapseTwo">
+                
+                    <h5>
+                        When selecting on the download file text, the function <code>saveData()</code> is called, and
+                        the user is able to download an HTML file including all of the markup performed to the DOM. 
+                        No other HTML modifications are made.
+                    </h5>
+                    </div>
+                </div>
+
+            
+            </div>
+
+
+        </div>
+    
+</body>
