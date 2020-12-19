@@ -13,7 +13,7 @@ The various forms of note-taking include:
 
 All of these options are available through the markup options:
 
-<img src="https://github.com/csc309-fall-2020/js-library-mcalli42/blob/master/pub/markup-options.png" width="300" height="50" />
+<img src="https://github.com/csc309-fall-2020/js-library-mcalli42/blob/master/pub/markup-options.png" width="300" height="80" />
 
 
 ## Heroku Deployed URL
