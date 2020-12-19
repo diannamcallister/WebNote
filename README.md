@@ -17,15 +17,18 @@ All of these options are available through the markup options:
 
 
 ## Heroku Deployed URL
-To see the landing page page for this library, go to: [https://webnote-lib.herokuapp.com/landing-page/landing_page.html](https://webnote-lib.herokuapp.com/landing-page/landing_page.html)
+To see the landing page page for this library, go to: [https://webnote-lib.herokuapp.com/](https://webnote-lib.herokuapp.com/)
 
 ### Examples
 To see the examples for this library, use the drop-down menu in the dashboard under "Examples":
 * Literature Review: [https://webnote-lib.herokuapp.com/lit-ex/lit_ex.html](https://webnote-lib.herokuapp.com/lit-ex/lit_ex.html)
 * Instructions: [https://webnote-lib.herokuapp.com/instruction-ex/instruction_ex.html](https://webnote-lib.herokuapp.com/instruction-ex/instruction_ex.html)
 
-### API documentation
+### API Documentation
 To see the API functions that can be called from WebNote, go to: [https://webnote-lib.herokuapp.com/functionality/functionality.html](https://webnote-lib.herokuapp.com/functionality/functionality.html)
+
+### JS Objects
+To understand the HTML and CSS behind the JS objects that are created and motified through WebNote, go to: [https://webnote-lib.herokuapp.com/js-objects/js_objects.html](https://webnote-lib.herokuapp.com/js-objects/js_objects.html)
 
 ## Getting Started Information
 The information for "getting started" using WebNote can be found below, and also at: [https://webnote-lib.herokuapp.com/impl/impl.html](https://webnote-lib.herokuapp.com/impl/impl.html)
