@@ -1,0 +1,55 @@
+h2 {
+    text-align: center;
+    background-color: #93ddf3;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+h4, h3 {
+    text-align: center;
+}
+
+ul {
+    display: table;
+    margin: 0 auto;
+}
+
+.header {
+    border: 5px solid #93ddf3;
+    border-radius: 25px;
+}
+
+.markupOptionsPic {
+    width: 320px;
+    height: 60px;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#ui, #di, #ex {
+    text-align: left;
+    text-decoration: underline;
+    background-color: none;
+}
+
+code {
+    background-color: lightgray;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}

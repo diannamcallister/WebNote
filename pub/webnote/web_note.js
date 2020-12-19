@@ -237,13 +237,16 @@
             while (anchored.tagName.toLowerCase() !== "p" && anchored.tagName.toLowerCase() !== "ol" && anchored.tagName.toLowerCase() !== "ul") {
                 anchored = anchored.parentElement;
             }
-            document.body.insertBefore(outerDiv, anchored);
+            console.log(anchored);
+            anchored.parentElement.insertBefore(outerDiv, anchored);
+            // document.body.insertBefore(outerDiv, anchored);
         }
     }
 
     function removeHighlightOptions() {
         const outerDiv = document.getElementById("highlight");
-        document.body.removeChild(outerDiv);
+        outerDiv.parentElement.removeChild(outerDiv);
+        // document.body.removeChild(outerDiv);
     }
 
     function loadData() {

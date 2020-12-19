@@ -4,8 +4,8 @@
     padding-top: 5px;
     padding-bottom: 5px;
     margin:5px;
-    height:60px;
-    width:340px;
+    height:80px;
+    width:360px;
     overflow:hidden;
     text-align:center;
     background-color: white;
@@ -44,6 +44,8 @@
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
+    opacity: 100;
+    font: auto;
 }
 
 .tooltip .tooltiptext {

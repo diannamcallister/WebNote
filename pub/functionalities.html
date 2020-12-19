@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ 	<meta charset="utf-8">
+    <title>WebNote</title>
+    <link rel="stylesheet" type="text/css" href="web_note.css">
+    <link rel="stylesheet" type="text/css" href="functionalities.css">
+
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer type="text/javascript" src='web_note.js'></script>
+     
+ </head>
+ <body>
+    <div class="header"><h1>WebNote Functionalities</h1></div>
+
+    <h2>Table of Contents</h2>
+    <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li>Highlight</li>
+        <li>Remove Highlight</li>
+        <li>Strikethrough</li>
+        <li>Add Bookmark</li>
+        <li>Create Note</li>
+        <li>Remove Markup Bar</li>
+        <li>Download Markup</li>
+        <li>Upload Markup</li>
+    </ul>
+
+    <h2 id="overview">Overview</h2>
+
+    <h3>All functionalities of WebNote are accessible through the markup bar displayed below:</h3>
+    <img class="markupOptionsPic" src="markup-options.png" />
+
+    <h3 id="ui">User Interaction</h3>
+    <p>
+        When a user selects any text, the markup bar will appear. The user is then able to select any of the markup
+        options to be performed on the selected text. The chosen markup option will be refelected on the webpage, and
+        the markup bar will disappear.
+    </p>
+
+    <h3 id="di">Developer Interaction</h3>
+    <p>
+        To allow the user to access the markup bar, the developer must add an event listener to the text element where the markup 
+        functionality is desired. It can be added like:
+        <br>
+        <code>
+            const textElement = document.getElementById("id_of_element");
+            <br>
+            textElement.addEventListener('click', nextToHighlight);
+        </code>
+        <br>
+        <code>nextToHighlight()</code> is a function from the WebNote library which allows for the markup bar to be displayed!
+    </p>
+
+    <h3 id="ex">Example Usage</h3>
+    <div class="row">
+        <div class="column">
+            User Display
+            <p>
+                Select any part of this sentence to be able to display the markup bar!
+            </p>
+        </div>
+        <div class="column">
+            CSS
+            <p>
+            <code>
+                markup-bar {
+                    <br>
+                    ADD CODE FOR WHAT MAKES UP THE BAR
+                    <br>
+                }
+            </code>
+            </p>
+        </div>
+        <div class="column">
+            JS
+        </div>
+    </div>
+
+
+
+    
+ </body>
+</html>

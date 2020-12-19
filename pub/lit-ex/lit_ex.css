@@ -1,0 +1,36 @@
+h1 {
+    margin: 20px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+}
+
+h4 {
+    margin: 20px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+
+.rectangle {
+    height: 7px;
+    width: 250px;
+    background-color: #93ddf3;
+    margin: 20px;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+.nav-margin {
+    padding-left: 20px;
+}
+
+.nav-link {
+    color: #5dc4e4;
+}
+
+.code {
+    margin: 30px;
+}
+
+.code-backing {
+    background-color: whitesmoke;
+}
