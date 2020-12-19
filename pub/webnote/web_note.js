@@ -257,7 +257,6 @@
         fr.onload = function(e) {
             HTMLdiv.innerHTML = e.target.result;
         };
-        console.log(file.files[0]);
         fr.readAsText(file.files[0]);
     }
 

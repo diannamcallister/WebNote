@@ -1,0 +1,49 @@
+h1 {
+    margin: 20px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+}
+
+h2 {
+    margin: 20px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    color: #79d4f0;
+}
+
+h2:hover {
+    color: #56bcdb;
+}
+
+h4, h3 {
+    margin: 20px;
+    margin-left: 30px;
+    margin-bottom: 0px;
+}
+
+h5 {
+    margin: 20px;
+    margin-left: 50px;
+    margin-top:10px;
+}
+
+.rectangle {
+    height: 7px;
+    width: 270px;
+    background-color: #93ddf3;
+    margin: 20px;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+.code {
+    margin: 30px;
+}
+
+.code-backing {
+    background-color: whitesmoke;
+}
+
+.show {
+    margin-bottom: 20px;
+}

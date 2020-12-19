@@ -8,7 +8,7 @@
 
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script defer type="text/javascript" src='lit_ex.js'></script>
+    <script defer type="text/javascript" src='landing_page.js'></script>
      
  </head>
  <body>
@@ -35,7 +35,7 @@
                 <a class="nav-link" href="../impl/impl.html">Implementation</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Functionality</a>
+                <a class="nav-link" href="../functionality/functionality.html">Functionality</a>
             </li>
             </ul>
         </div>
@@ -55,24 +55,24 @@
             <p>
                 <h4 class="center description">The various forms of note-taking include:</h4>
                 <ul class='ul-center'>
-                    <li id="highlight-li" onclick="changeGif('../yellow-highlight.gif', 'highlight-li')">Highlight text in various colours</li>
-                    <li id="strikethrough-li">Cross out text</li>
-                    <li id="note-li">Add notes to text</li>
-                    <li id="bookmark-li">Bookmark places within a webpage</li>
-                    <li id="export-li">Export the html of the page after note-taking</li>
-                    <li id="import-li">Import previous markup of the webpage</li>
+                    <li id="highlight-li" onclick="changeGif('../gifs/highlight.gif', 'highlight-li')">Highlight text in various colours</li>
+                    <li id="strikethrough-li" onclick="changeGif('../gifs/strikethrough.gif', 'strikethrough-li')">Cross out text</li>
+                    <li id="note-li" onclick="changeGif('../gifs/note.gif', 'note-li')">Add notes to text</li>
+                    <li id="bookmark-li" onclick="changeGif('../gifs/bookmark.gif', 'bookmark-li')">Bookmark places within a webpage</li>
+                    <li id="export-li" onclick="changeGif('../gifs/download.gif', 'export-li')">Export the html of the page after note-taking</li>
+                    <li id="import-li" onclick="changeGif('../gifs/upload.gif', 'bookmark-li')">Import previous markup of the webpage</li>
                 </ul>
             </p>
             <p class="center">
                 More detailed explanations of each functionality can be found 
-                <a href="../functionalities.html"><b>here</b></a>.
+                <a href="../functionality/functionality.html"><b>here</b></a>.
             </p>
         </div>
         <div class="column">
             <div class="rightColumn">
             <h2>Quick View</h2>
             <p class="center"><b>Select any of the functionalities in the left column to have a quick display of them here!</b></p>
-            <img class="gif" id="gif" src='../yellow-highlight.gif'/>
+            <img class="gif" id="gif" src='../gifs/highlight.gif'/>
             </div>
         </div>
     </div>
@@ -80,7 +80,7 @@
     <div class="row">
         <div class="column center">
             <h4 class="description">
-                Want to implement WebNote to your website today?
+                Want to implement WebNote in your website today?
             </h4>
             <a href="../impl/impl.html">
             <button type="button" class="btn btn-lg button-center" style="background-color: #93ddf3;">Implement NOW!</button>
