@@ -116,7 +116,7 @@ The information for "getting started" using WebNote can be found below, and also
 <h5>
     When calling the <code>test.html</code> file through the browser, and selecting some of the text, the markup options should appear:
 </h5>
-
+<img src="https://github.com/csc309-fall-2020/js-library-mcalli42/blob/master/pub/impl/test-ex.png" width="600" height="100" />
 
 ## Acklowedgements & Citations
 * To learn how to include note visability / hovering in a certain manner as well as various other style formats, [https://www.w3schools.com/](https://www.w3schools.com/) was extremely helfpul
