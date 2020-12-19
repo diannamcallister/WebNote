@@ -40,7 +40,7 @@
         </div>
     </nav>
     <h1>
-        Getting Started
+        API from WebNote
     </h1>
     <div class="rectangle"></div>
 
@@ -66,13 +66,17 @@
     </h5>
 
     <h4>
-        2. <code>saveData()</code>
+        2. <code>saveData(e, fileName)</code>
     </h4>
     <h5>
         This function should be used to save the html of a webpage, when a user has performed markup changes. This functionality would be best
         suited for websites who store their user's interaction with the page; this way, when a user leaves a webpage where they 
-        just performed markup, the webpage is able to save the markup performed by this user to a file, which can then be stored to the 
-        database of the website.
+        just performed markup, the webpage is able to save the markup performed by this user to a file with the name <i>fileName</i> (as
+        specified by the input parameter), which can then be stored to the database of the website.
+        <br>
+        In addition, a user can be given the opportunity to manually save the markup of the webpage themself, where they can choose the 
+        file name they desire, and save the markup locally, and re-load it into the webpage at a later time using the <code>loadData()</code>
+        function in WebNote.
     </h5>
 
     <h4>
@@ -83,6 +87,11 @@
         suited for websites who store their user's interaction with the page; this way, when a user is accessing a webpage where they 
         previously performed markup, the webpage is able to load back in the markup performed by this user (as the webpage had previously
         saved the user's markup changes using the <code>saveData()</code> function from the WebNote library).
+        <br>
+        In addition, a user can be given the opportunity to manually upload an html file of the webpage after previous markup they performed,
+        so that they can view their markup and add more!
+        <br>
+        Note: this function uses <i>FileReader()</i>, which only allows for manual upload to prevent security breaches from occurring.
     </h5>
     
 </body>

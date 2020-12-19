@@ -1,3 +1,6 @@
+var source = document.getElementById('source'); 
+source.addEventListener('click', nextToHighlight);
+
 var abstract1 = document.getElementById('abstract1'); 
 abstract1.addEventListener('click', nextToHighlight);
 

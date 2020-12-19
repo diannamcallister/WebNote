@@ -260,7 +260,7 @@
         fr.readAsText(file.files[0]);
     }
 
-    function saveData() {
+    function saveData(e, fileName) {
         removeHighlightOptions();
         var a = document.createElement("a");
         document.body.appendChild(a);
@@ -269,13 +269,19 @@
         let blob = new Blob([data], {type: "text/html"});
         let url = window.URL.createObjectURL(blob);
         a.href = url;
-        let downloadFile = prompt("What is the name of the file you want to save the html to?");
-        a.download = downloadFile;
-        a.click();
-        window.URL.revokeObjectURL(url);
+        if (fileName === undefined) {
+            let downloadFile = prompt("What is the name of the file you want to save the html to?");
+            a.download = downloadFile;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        } else {
+            a.download = fileName;
+            a.click();
+        }
     };
 
     global.nextToHighlight = global.nextToHighlight || nextToHighlight
     global.loadData = global.loadData || loadData
+    global.saveData = global.saveData || saveData
 
 })(window, window.document, $);
