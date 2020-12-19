@@ -13,11 +13,11 @@ The various forms of note-taking include:
 
 All of these options are available through the markup options:
 
-<img src="https://github.com/csc309-fall-2020/js-library-mcalli42/blob/master/pub/markup-options.png" width="300" height="50" />
+<img src="https://github.com/csc309-fall-2020/js-library-mcalli42/blob/master/pub/markup-options.png" width="300" height="80" />
 
 
 ## Heroku Deployed URL
-To see the landing page page for this library, go to: [https://webnote-lib.herokuapp.com/landing-page/landing_page.html](https://webnote-lib.herokuapp.com/landing-page/landing_page.html/)
+To see the landing page page for this library, go to: [https://webnote-lib.herokuapp.com/landing-page/landing_page.html](https://webnote-lib.herokuapp.com/landing-page/landing_page.html)
 
 ### Examples
 To see the examples for this library, use the drop-down menu in the dashboard under "Examples":
@@ -25,7 +25,7 @@ To see the examples for this library, use the drop-down menu in the dashboard un
 * Instructions: [https://webnote-lib.herokuapp.com/instruction-ex/instruction_ex.html](https://webnote-lib.herokuapp.com/instruction-ex/instruction_ex.html)
 
 ### API documentation
-To see the API functions that can be called from WebNote, go to: [https://webnote-lib.herokuapp.com/impl/impl.html](https://webnote-lib.herokuapp.com/impl/impl.html)
+To see the API functions that can be called from WebNote, go to: [https://webnote-lib.herokuapp.com/functionality/functionality.html](https://webnote-lib.herokuapp.com/functionality/functionality.html)
 
 ## Getting Started Information
 The information for "getting started" using WebNote can be found below, and also at: [https://webnote-lib.herokuapp.com/impl/impl.html](https://webnote-lib.herokuapp.com/impl/impl.html)
