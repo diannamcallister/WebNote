@@ -25,7 +25,7 @@ To see the examples for this library, use the drop-down menu in the dashboard un
 * Instructions: [https://webnote-lib.herokuapp.com/instruction-ex/instruction_ex.html](https://webnote-lib.herokuapp.com/instruction-ex/instruction_ex.html)
 
 ### API documentation
-To see the API functions that can be called from WebNote, go to: [https://webnote-lib.herokuapp.com/impl/impl.html](https://webnote-lib.herokuapp.com/impl/impl.html)
+To see the API functions that can be called from WebNote, go to: [https://webnote-lib.herokuapp.com/functionality/functionality.html](https://webnote-lib.herokuapp.com/functionality/functionality.html)
 
 ## Getting Started Information
 The information for "getting started" using WebNote can be found below, and also at: [https://webnote-lib.herokuapp.com/impl/impl.html](https://webnote-lib.herokuapp.com/impl/impl.html)
